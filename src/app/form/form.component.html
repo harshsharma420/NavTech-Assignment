@@ -1,0 +1,38 @@
+<form [formGroup]="simpleForm" (ngSubmit)="OnSubmit()">
+    <div>
+        <label for="fName">First Name</label>
+        <input type="text" formControlName="firstName">
+    </div>
+    <small *ngIf="firstNameValidator && firstNameValidator.invalid && firstNameValidator.touched">The First Name is not Valid</small>
+    <div>
+        <label for="lName">Last Name</label>
+        <input type="text" formControlName="lastName">
+        <!-- <small>The First Name is not Valid</small> -->
+        <small *ngIf="lastNameValidator && lastNameValidator.invalid && lastNameValidator.touched">The Last Name is not Valid</small>
+    </div>
+    <div>
+        <label for="email">Email</label>
+        <input type="text" formControlName="email">
+        <!-- <small>The First Name is not Valid</small> -->
+        <small *ngIf="emailValidator && emailValidator.invalid && emailValidator.touched">The email is not Valid</small>
+    </div>
+    <div>
+        <label for="phone">Email</label>
+        <input type="number" formControlName="phone">
+        <!-- <small>The First Name is not Valid</small> -->
+        <small *ngIf="phoneValidator && phoneValidator.invalid && phoneValidator.touched">The email is not Valid</small>
+    </div>
+    <div>
+        <button type="submit">Submit</button>
+    </div>
+</form>
+<br><br>
+<div *ngIf="users != null">
+    <table>
+        <tr>
+            <th> 
+                userId 
+            </th>
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,38 @@
+<div *ngIf="users != null">
+    <table>
+        <tr>
+            <th>
+                userId
+            </th>
+            <th>
+                First Name
+            </th>
+            <th>
+                Last Name
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                Phone
+            </th>
+        </tr>
+        <tr *ngFor="let userData of users.user; let  i = index">
+            <th>
+                {{userData.userId}}
+            </th>
+            <th>
+                {{userData.firstName}}
+            </th>
+            <th>
+                {{userData.lastName}}
+            </th>
+            <th>
+                {{userData.email}}
+            </th>
+            <th>
+                {{userData.phone}}
+            </th>
+        </tr>
+    </table>
+</div>
